@@ -4,37 +4,123 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <title>Bence Vinkovics</title>
 </head>
 <body>
-
-    <main>
-        <section id="one">
-            <div id="oneBox">
-                <div class="picContainer">
-                    <img id="me" src="black_and_white_nobg_png.png" alt="A picture of me">
+    <section class="hero">
+        <div id="navBar">
+            <nav>
+                <a class="navItem" class="active" href="#one">About</a>
+                <a class="navItem" class="anchor" href="#two">Projects</a>
+                <a class="navItem" href="#three">Contact</a>
+            </nav>
+        </div>
+        <div class="heroContent">
+            <div id="greeting">Hello, my name is</div>
+            <div id="name"> Bence Vinkovics</div>            
+            <p class="socialContainer">
+                <a href="https://github.com/bencevinkovics">
+                    <img class="socialLogo" src="images/github.png" alt="git icon">
+                </a>
+                <a href="https://www.linkedin.com/in/bence-v-3a74121b7">
+                    <img class="socialLogo" src="images/linkedin.png" alt="linkedin icon">
+                </a>                        
+            </p>
+            <div class="contactButtonContainer">
+                <a class="contactButton" id="topContactButton" target="_blank"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSfgl8jbplpjhjH4OkT2cZve01wM87LYXUTn-OhGKgnHMvOMXQ/viewform?usp=sf_link">
+                Contact me
+            </a>
+            </div>
+        </div>
+    </section>
+    <section class="about" id="one">
+        <h1 class="sectionTitle">About me</h1>
+        <div class="aboutContainer">
+            <div class="imgAndTextContainer">
+                <div class="imgContainer">
+                    <img class="imgMe"src="images/IMG_20210916_184746 (2).jpg" alt="">
                 </div>
-                <div class="textContainer">
-                    <h1>Hello,</h1>
-                    <h2>My name is Bence Vinkovics</h2>
-                    <p>
-                       I am a student, studying Business Informatics, at Corvinus Univeristy of Budapest and I aspire to be a web developer.
-                    </p>
-                    <p id="socialContainer">
-                        <a href="https://github.com/bencevinkovics">
-                            <img class="socialLogo" src="github.png" alt="git icon">
-                        </a>
-                        <a href="https://www.linkedin.com/in/bence-v-3a74121b7">
-                            <img class="socialLogo" src="linkedin.png" alt="linkedin icon">
-                        </a>                        
-                    </p>
+                <div class="aboutText">
+                    I am a Student, studying Business Informatics, at Corvinus Univeristy of Budapest 
+                    and I aspire to become a web developer.
                 </div>
             </div>
-        </section>
-    </main>
+            <div class="technologies">
+                <p>Technologies I use</p>
+                <div class="technologyImages">
+                    <img class="langImage" src="images/HTML5_logo_and_wordmark.png" alt="Html logo">  
+                    <img class="langImage" src="images/CSS3_logo_and_wordmark.png" alt="CSS logo">   
+                    <img class="langImage" src="images/1024px-Unofficial_JavaScript_logo_2.svg.png"alt="JavaScript logo">
+                    <img class="langImage" src="images/1280px-React-icon.svg.png" alt="React logo">
+                    <img class="langImage" src="images/c.svg" alt="C# logo">
+                    <img class="langImage" src="images/Git_icon.svg" alt="Git icon">
+                    <img class="langImage" src="images/Visual_Studio_Code_1.35_icon.svg.png" alt="Visual Studio Code logo">
+                    <img class="langImage" src="images/Visual_Studio_Icon_2019.svg.png" alt="Visual Studio logo">  
+                </div>                
+            </div>
+        </div>
+    </section>
+    <section class="projects" id="two">
+        <h1 class="sectionTitle">Projects</h1>
+        <div class="projectContainer">
+            <img class="projectImg" src="images/weather-forecast.png" alt="Weather Forecast">
+            <h2 class="imgText">Weather forecast (React)</h2>
+            <p class="projectDescription">
+                A weather foreacast React webapp. I designed the style and the logos are from iconfinder.com. 
+                The data comes from openweathermap's API.
+            </p>
+            <div class="buttonContainer">
+                <a href="https://github.com/bencevinkovics/weather-forecast" class="projectButton">View code</a>
+                <a href="https://bencevinkovics.github.io/weather-forecast" class="projectButton">Live site</a>
+            </div>
+        </div>
+        <div class="projectContainer">
+            <img class="projectImg" src="images/password-generator.png" alt="Password generator">
+            <h2 class="imgText">Password Generator</h2>
+            <p class="projectDescription">
+                A smaller JS project, that I created for fun. 
+                It's a small website for creating random passwords.
+            </p>
+            <div class="buttonContainer">
+                <a href="https://github.com/bencevinkovics/password-generator" class="projectButton">View code</a>
+                <a href="https://bencevinkovics.github.io/password-generator" class="projectButton">Live site</a>
+            </div>
+        </div>
+        <div class="projectContainer">
+            <img class="projectImg" src="images/recept-oldal.png" alt="Receipe site">
+            <h2 class="imgText">Recipe Website</h2>
+            <p class="projectDescription">
+                A website for uploading and sharing recipes with each other. The style and the logo was designed by me.
+                    An older uni project, so the upload function is just a template.
+                </p>
+            <div class="buttonContainer">
+                <a href="https://github.com/bencevinkovics/recept-oldal" class="projectButton">View code</a>
+                <a href="https://bencevinkovics.github.io/recept-oldal" class="projectButton">Live site</a>
+            </div>
+        </div>                
+        <div class="projectContainer">
+            <img class="projectImg" src="images/hangman-game.PNG" alt="Receipe site">
+            <h2 class="imgText">Hangman Game(C#)</h2>
+            <p class="projectDescription">
+                The classic hangman game written in C#.
+            </p>
+            <div class="buttonContainer">
+                <a href="https://github.com/bencevinkovics/Hangman-game" class="projectButton">View code</a>
+            </div>
+        </div>
+    </section>
+    <section class="contact" id="three">
+        <a class="contactButton" target="_blank"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfgl8jbplpjhjH4OkT2cZve01wM87LYXUTn-OhGKgnHMvOMXQ/viewform?usp=sf_link">
+            Contact me
+        </a>
+    </section>
+    <!--<footer>Made by Bence Vinkovics 2021</footer>-->
+    <script src="script.js"></script>
 </body>
 </html>

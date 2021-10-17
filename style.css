@@ -1,0 +1,322 @@
+:root {
+    --backgroundColor: #FFFFFF;/*#D4D4D4;*/
+    --boxColor: #1a1a1a;
+    --fontColor: #0A0A0A;
+    --highlightColor: teal/*#E64900*/;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    background-color: var(--backgroundColor);
+    color: var(--fontColor);
+    font-family: 'Lato', sans-serif;
+    font-size: 2.5vh;
+}
+h2{
+    color: var(--highlightColor)
+}
+
+#navBar{
+    position: fixed;
+    width: 100vw;
+    z-index: 2;
+}
+
+.navBarBackgroundOn{
+    background-color: var(--backgroundColor);
+    transition: all 1s;
+}
+
+.navBarBackgroundOff{
+    background-color: transparent;
+    transition: all 1s;
+}
+
+nav{
+    text-align: right;
+    font-size: 4vh;
+    padding: 6vh 8vh 0 0;
+    font-weight: bold;
+}
+
+.navItem{
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: var(--fontColor);
+    margin: 0 3vh 2vh 3vh;
+}
+
+.navItem:hover{
+    color:var(--highlightColor);
+}
+
+.navItem:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--highlightColor);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+  
+.navItem:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.hero{
+    background-image: url(images/forest.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+
+.heroContent{
+    display: flex;
+    flex-direction: column;
+    padding-top: 30vh;
+    margin-left: 5%;
+}
+
+#greeting{
+    font-size: 4vh;
+}
+
+#name{
+    color: var(--highlightColor);
+    font-size: 6vh;
+    font-weight: bold;
+}
+
+#topContactButton{
+    width: 10vw;
+    margin: 1vh 1vh 1vh 0;
+    font-size: 4vh;
+    border: 3px solid var(--highlightColor);
+}
+
+.contactButtonContainer{
+    margin: 4vh 0 0 0;
+}
+
+.socialContainer{
+    margin: 0;
+}
+
+.socialLogo {
+    margin: 0;
+    width: 30px;
+    height: auto;
+    padding: 1vh 1vw 0 0;
+}
+
+.socialLogo:hover {
+    transition: 0.2s;
+    transform: scale(1.2);
+}
+
+.about{
+    margin: 4vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgAndTextContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 700px;
+}
+
+.imgContainer {
+    width: 20vh;
+    height: 20vh;
+    background-color: var(--highlightColor);
+    border: 5px solid var(--highlightColor);
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.imgMe{
+    width: inherit;
+    height: auto;
+    border-radius: 50%;
+    transform: scale(1.25);
+}
+
+.aboutText{
+    max-width: 50%;
+    padding-left: 5vw;
+    text-align: justify;
+}
+
+.technologies{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.technologyImages{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.technologyImages img{
+    padding: 5px;
+}
+
+.langImage{
+    height: 35px;
+    width: 35px;
+    padding-right: 1vw;
+}
+
+.projects{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.sectionTitle{
+    width: 90%;
+    font-size: 5vh;
+    text-align: center;
+}
+
+.projectContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin: 5vh;
+    width: 90%;
+    height: 500px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px;
+    max-width: 500px;
+}
+
+.projectImg{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 5%;
+    border-radius: 15px;
+}
+
+.imgText{
+    padding-top: 2vh;
+    margin: 0 0 0 5%;
+    color: var(--fontColor);
+}
+
+p.projectDescription{
+    padding-top: 2vh;
+    margin: 0 5% 0 5%;
+}
+
+.buttonContainer{
+    margin: 5% 0 5% 0;
+    width: 90%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.projectButton {
+    background-color: var(--highlightColor);
+    color: var(--backgroundColor);    
+    border: 3px solid var(--highlightColor);
+    padding: 10px;
+    margin-right: 2vw;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.projectButton:hover {
+    background-color: var(--backgroundColor);
+    color: var(--highlightColor);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contactButton{
+    font-size: 6vh;
+    margin: 5%;
+    padding: 15px;
+    background-color: var(--highlightColor);
+    color: var(--backgroundColor);
+    border: 8px solid var(--highlightColor);
+    border-radius: 15px;
+    text-decoration: none;
+}
+
+.contactButton:hover{
+    background-color: transparent;
+    color: var(--highlightColor);
+    cursor: pointer;
+}
+
+footer{
+    width: 100vw;
+    height: 10vh;
+    background-color: var(--highlightColor);
+    color: var(--backgroundColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 450px) {
+    .imgAndTextContainer{
+        flex-direction: column;
+    }
+
+    .aboutText{
+        max-width: 90%;
+        padding-top: 4vh;
+        padding-left: 5vw;
+        text-align: justify;
+    }
+
+    .heroContent{
+        padding-top: 15vh;
+    }
+
+    .navItem{
+        margin: 0 2vh 1vh 2vh;
+    }
+    
+    .navItem:hover{
+        color:var(--highlightColor);
+    }
+    
+    nav{
+        text-align: center;
+        font-size: 3vh;
+        padding: 5vh 0 0 0;
+        font-weight: bold;
+    }
+}
